@@ -3,7 +3,7 @@
 This project is an AI-powered application designed to analyze restaurant reviews and provide detailed summaries of both positive and negative feedback. The application leverages the **Graph of Thoughts (GoT)** framework, a recent advancement in AI, for more comprehensive and non-linear analysis of user reviews.
 
 ## follow the given PDF for complete implementation details
-[Alt text](./Review_analyser_GoT.pdf)
+![PPT](./Review_analyser_GoT.pdf)
 
 ## System architecture
 ![Alt text](./images/systemflow.png)
@@ -28,9 +28,9 @@ This project is an AI-powered application designed to analyze restaurant reviews
 - the include all the iintermediate thoughts of the AI before giving final output
 
 ## UI for URL input
-![Alt text](./images/s2.png)
+![flow chart](./images/s2.png)
 
 ## UI of final summary and for accessing saved summary
-![Alt text](./images/s3.png)
-![Alt text](./images/s1.png)
-![Alt text](./images/s4.png)
+![UI_img](./images/s3.png)
+![UI_img](./images/s1.png)
+![UI_img](./images/s4.png)
