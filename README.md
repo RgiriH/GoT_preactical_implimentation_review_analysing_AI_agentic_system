@@ -2,6 +2,9 @@
 
 This project is an AI-powered application designed to analyze restaurant reviews and provide detailed summaries of both positive and negative feedback. The application leverages the **Graph of Thoughts (GoT)** framework, a recent advancement in AI, for more comprehensive and non-linear analysis of user reviews.
 
+## System architecture
+![Alt text](./images/systemflow.png)
+
 ## Features
 - **Scrapes reviews** from restaurant websites like Zomato using the **Cheerio** library.
 - **Graph of Thoughts (GoT) framework** implemented for advanced reasoning and review analysis, offering a **35% improvement** in accuracy and depth over traditional methods.
