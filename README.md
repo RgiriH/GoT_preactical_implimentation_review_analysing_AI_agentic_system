@@ -23,3 +23,8 @@ This project is an AI-powered application designed to analyze restaurant reviews
 
 ## UI for URL input
 ![Alt text](./images/s2.png)
+
+## UI of final summary and for accessing saved summary
+![Alt text](./images/s3.png)
+![Alt text](./images/s1.png)
+![Alt text](./images/s4.png)
