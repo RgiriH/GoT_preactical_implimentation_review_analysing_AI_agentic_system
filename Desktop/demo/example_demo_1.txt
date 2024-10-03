@@ -1,0 +1,338 @@
+**************************************************** Analysis of first 50 reviews ********************************
+Original summary:  {
+  analysis: {
+    positivePoints: [
+      'Customers often remarked on the authentic Rajasthani flavors and the overall good taste of the food.',
+      "The service was generally described as friendly and attentive, with some guests specifically mentioning the staff's kindness.",
+      'Several patrons found the restaurant to be a good value for money, especially for the Rajasthani thalis.',
+      'Some guests particularly enjoyed the birthday celebration experience with the birthday song performed by the staff.'
+    ],
+    negativePoints: [
+      'A recurring concern was the quality of the food, with mentions of stale, chilled, or below-average food.',
+      'Several customers reported issues with the washrooms, including hygiene concerns, lack of water, and being closed.',
+      'There were complaints about the portion sizes being too small for the price, particularly regarding the daal quantity in the Rajwadi Thali.',
+      "Some customers felt the restaurant was overcrowded, lacked space for children, and didn't offer high chairs, creating a less-than-ideal experience for families."
+    ],
+    suggestions: [
+      'Implementing stricter quality control measures for food preparation and freshness would significantly improve customer satisfaction.',
+      'Addressing the washroom concerns by ensuring cleanliness, adequate water supply, and proper maintenance is crucial.',
+      'Reviewing the portion sizes and considering adjusting them to better align with the pricing would address customer feedback on value.',
+      'Creating a more family-friendly environment with designated seating arrangements for families with children and providing high chairs would enhance the overall experience.'
+    ]
+  }
+}
+improvement suggested :  {
+  score: '6',
+  Redundencies: [
+    "The summary mentions 'quality of the food' and 'stale, chilled, or below-average food' which is redundant and can be summarized as 'poor food quality'.",
+    "The summary mentions 'issues with the washrooms' and 'hygiene concerns, lack of water, and being closed' which is redundant and can be summarized as 'washroom issues'.",
+    "The summary mentions 'portion sizes being too small for the price' and 'particularly regarding the daal quantity in the Rajwadi Thali' which is redundant and can be summarized as 'small portion sizes'.",
+    "The summary mentions 'overcrowded' and 'lacked space for children' which is redundant and can be summarized as 'lack of space'.",
+    "The summary mentions 'designated seating arrangements for families with children' and 'providing high chairs' which is redundant and can be summarized as 'family-friendly seating arrangements'."
+  ],
+  Important_points_missing: [
+    'The summary lacks mention of the negative feedback related to the lack of options in the menu and the limited number of dishes served.',
+    'The summary lacks mention of the negative feedback related to the no-cash payment policy and the refusal to organize birthday parties.',
+    'The summary lacks mention of the negative feedback related to the air conditioning not working properly and the ambient noise issues.',
+    'The summary lacks mention of the negative feedback related to the lack of hygiene and cleanliness of the restaurant and the staff.'
+  ]
+}
+After improvement summary :  {
+  analysis: {
+    positivePoints: [
+      "Many customers praised the authentic Rajasthani flavors and the overall good taste of the food, with some specifically mentioning the food's similarity to traditional Rajasthani cuisine.",
+      "The service was generally described as friendly and attentive, with several guests highlighting the staff's kindness.",
+      'The restaurant was considered good value for money, especially for the Rajasthani thalis, offering a variety of dishes at an affordable price.',
+      'Some customers enjoyed the birthday celebration experience, particularly the birthday song performed by the staff, adding a special touch to the occasion.'
+    ],
+    negativePoints: [
+      'Several customers reported concerns about the quality of the food, including mentions of stale, chilled, or below-average food.',
+      'There were multiple complaints about the lack of menu options and limited dish selection, leaving some customers feeling restricted.',
+      'Multiple reviews highlighted issues with the washrooms, including hygiene concerns, lack of water, and being closed, impacting the overall dining experience.',
+      'Customers voiced dissatisfaction with the no-cash payment policy, which was seen as inconvenient and limiting, especially for those who did not have access to card payments.',
+      'The restaurant was criticized for its refusal to host birthday parties, resulting in disappointment for customers who had planned celebrations there.'
+    ],
+    suggestions: [
+      'Implementing stricter quality control measures for food preparation and freshness would significantly improve customer satisfaction and address concerns about the quality of the food.',
+      'Expanding the menu to offer a wider variety of dishes and including more traditional Rajasthani options would cater to diverse preferences and address the lack of options.',
+      'Addressing the washroom concerns by ensuring cleanliness, adequate water supply, and proper maintenance is crucial for improving the overall hygiene and dining experience.',
+      'Considering the adoption of cashless payment methods or providing clear communication regarding payment options would address the inconvenience faced by customers who do not carry cash.',
+      'Reviewing the policy on birthday celebrations and potentially offering accommodating options for customers wanting to celebrate at the restaurant would improve customer satisfaction and address the current limitations.'
+    ]
+  }
+}
+**************************************************** Analysis of 51-100 reviews ********************************
+Original summary :  {
+  analysis: {
+    positivePoints: [
+      "Customers have praised the restaurant's authentic Rajasthani dishes.",
+      'The taste of the vegetarian food has been consistently appreciated.',
+      'Several customers have expressed their satisfaction with the packaging.',
+      "A few customers have described the restaurant as one of the best they've tried in India"
+    ],
+    negativePoints: [
+      'Some customers have expressed disappointment with the portion sizes, finding them to be too small.',
+      'The quality of the food has been a concern for a few customers, with mentions of stale or raw ingredients.',
+      'Several customers have reported issues with the service, including long waiting times, inattentive staff, and delays in serving food.',
+      'The cleanliness of the restaurant, particularly the washrooms, has been a concern for some customers.'
+    ],
+    suggestions: [
+      'Reviewing portion sizes and potentially increasing them to better align with customer expectations and pricing might help improve customer satisfaction.',
+      'Implementing stricter quality control measures to ensure fresh ingredients and consistent food quality could address customer concerns about stale or raw food.',
+      'Improving staff training and providing better service protocols could enhance customer experience, particularly regarding responsiveness to requests and timely delivery of food and drinks.',
+      'Focusing on improving hygiene standards, especially in the washrooms, will address the concerns raised by some customers.'
+    ]
+  }
+}
+improvement suggested :  {
+  score: '7',
+  Redundencies: [
+    'Several customers have expressed their satisfaction with the packaging',
+    'Several customers have reported issues with the service'
+  ],
+  Important_points_missing: [
+    "The summary doesn't mention the issue of the restaurant being overcrowded and causing long wait times and poor service.",
+    "The summary misses the fact that some customers felt the food was too spicy and the summary doesn't mention the request for specific sweets like Sheera, Lapsi etc.  ",
+    "The summary doesn't address the complaints regarding the ambiance and the lack of proper air conditioning.",
+    'The summary misses the negative feedback about the unprofessional staff and their lack of listening skills.'
+  ]
+}
+After improvement summary :  {
+  analysis: {
+    positivePoints: [
+      'The restaurant is praised for its authentic Rajasthani dishes, with several customers specifically mentioning the quality of the vegetarian food.',
+      'Many customers have expressed satisfaction with the packaging of their orders.'
+    ],
+    negativePoints: [
+      'Customers have repeatedly complained about the restaurant being overcrowded, leading to long wait times and poor service.',
+      'Some customers found the food to be too spicy, and others have reported issues with the quality, including stale or raw ingredients.',
+      'There are multiple reports of unprofessional staff, including slow service, delays in fulfilling requests, and a lack of attention to customer needs.',
+      'Several customers have expressed concerns about the ambiance, citing the lack of proper air conditioning and an uncomfortable atmosphere.'
+    ],
+    suggestions: [
+      'The restaurant should address the overcrowding issue by implementing strategies to manage the flow of customers and improve service quality during peak hours.',
+      'Reviewing the portion sizes and potentially increasing them to better align with customer expectations and pricing might help improve customer satisfaction.',
+      'Implementing stricter quality control measures to ensure fresh ingredients and consistent food quality could address customer concerns about stale or raw food.',
+      'The restaurant should prioritize improving staff training and providing better service protocols to enhance customer experience, particularly regarding responsiveness to requests and timely delivery of food and drinks.'
+    ]
+  }
+}
+
+**************************************************** Analysis of 101-150 reviews ********************************
+
+Original summary :  {
+  analysis: {
+    positivePoints: [
+      "Many customers praised the packaging, highlighting its impressive presentation and 'grandeur'.",
+      "The food itself was frequently lauded, with customers describing it as 'heavenly' and 'very tasty'.",
+      'The variety offered in the thali was appreciated, with customers highlighting the inclusion of various dishes.',
+      'Several customers specifically mentioned the excellent service they received, noting the attentiveness and helpfulness of the staff.'
+    ],
+    negativePoints: [
+      'Several customers expressed concerns about the portion sizes, finding them too small, especially in relation to the price.',
+      'Some customers found the quality of the food to be inconsistent, with certain dishes falling short of expectations.',
+      'Multiple customers mentioned issues with the service, including delays in serving specific items and the staff not addressing their concerns.',
+      'A recurring concern was the lack of sufficient gravy, particularly when ordering rice, leaving customers with insufficient sauce to accompany their meal.'
+    ],
+    suggestions: [
+      'Consider revising the portion sizes to ensure they align with customer expectations, especially considering the restaurant’s price point.',
+      'Focus on consistently delivering high-quality food across all dishes to ensure customer satisfaction.',
+      'Implement training for staff to improve responsiveness to customer requests and enhance the overall service experience.',
+      'Review the quantities of gravy provided, especially with rice, to guarantee sufficient sauce for accompanying dishes.'
+    ]
+  }
+}
+improvement suggested :  {
+  score: '6',
+  Redundencies: [
+    "The summary repeats the point about the food being 'heavenly' twice in the positive points.",
+    'The summary also repeats the point about the lack of sufficient gravy in both the negative points and suggestions sections.'
+  ],
+  Important_points_missing: [
+    'The summary fails to mention the issue of cold food, which was raised in multiple reviews. This is a significant concern for customer satisfaction.',
+    "The summary doesn't cover the negative feedback about the taste of certain dishes, such as the  'Gatta Sabji' and 'Kadhi' being bad, and rice being tasteless. This is important for understanding the overall food quality.",
+    "The summary doesn't mention the complaint about rotten rice, a serious hygiene concern.",
+    "The summary omits the concerns about the manager's lack of receptiveness to feedback, which is a significant issue regarding customer service.",
+    "The summary doesn't include the issue of missing items, such as the paneer and the Malpua, which indicates a potential problem with order fulfillment.",
+    'The summary misses the concerns about the hygiene of the restaurant.  The review mentions unhygienic conditions and bad smelling rice.'
+  ]
+}
+After improvement summary :  {
+  analysis: {
+    positivePoints: [
+      "Many customers praised the packaging, highlighting its impressive presentation and 'grandeur'.",
+      "The food itself was frequently lauded, with customers describing it as 'heavenly' and 'very tasty'.",
+      'The variety offered in the thali was appreciated, with customers highlighting the inclusion of various dishes.',
+      'Several customers specifically mentioned the excellent service they received, noting the attentiveness and helpfulness of the staff.',
+      'Some customers found the ambience to be pleasant and the desserts to be enjoyable.'
+    ],
+    negativePoints: [
+      'Several customers expressed concerns about the portion sizes, finding them too small, especially in relation to the price.',
+      "Some customers found the quality of the food to be inconsistent, with certain dishes falling short of expectations.  For example, the 'Gatta Sabji', 'Kadhi', and rice were criticized for their taste.",
+      'Multiple customers mentioned issues with the service, including delays in serving specific items and the staff not addressing their concerns.',
+      'A recurring concern was the lack of sufficient gravy, particularly when ordering rice, leaving customers with insufficient sauce to accompany their meal.',
+      'Multiple reviews highlight concerns about food hygiene, with reports of cold food, rotten rice, and unhygienic conditions.'
+    ],
+    suggestions: [
+      'Consider revising the portion sizes to ensure they align with customer expectations, especially considering the restaurant’s price point.',
+      "Focus on consistently delivering high-quality food across all dishes to ensure customer satisfaction. Pay close attention to the taste and quality of dishes like 'Gatta Sabji', 'Kadhi', and rice, as these have received negative feedback.",
+      "Implement training for staff to improve responsiveness to customer requests and enhance the overall service experience. Specifically address issues with delays in serving food and the manager's lack of receptiveness to feedback.",
+      'Review the quantities of gravy provided, especially with rice, to guarantee sufficient sauce for accompanying dishes.',
+      'Address hygiene concerns raised by customers. Ensure food is served at the appropriate temperature, and implement stricter measures to prevent issues like rotten rice and unhygienic conditions.'
+    ]
+  }
+}
+
+**************************************************** Analysis of 151 - 200 reviews ********************************
+
+Original summary :  {
+  analysis: {
+    positivePoints: [
+      "Customers have praised the restaurant's authentic Rajasthani cuisine, highlighting its delicious flavors and variety.",
+      'The friendly staff was appreciated by many, adding a positive touch to the dining experience.',
+      'The delivery service was generally appreciated for its promptness.',
+      "Some customers have noted the restaurant's good packaging and the pleasant ambiance."
+    ],
+    negativePoints: [
+      'Several customers expressed dissatisfaction with the portion sizes, finding them too small for the price.',
+      'Issues with food quality were mentioned, including the presence of foreign objects and a lack of consistent flavor.',
+      'Poor customer service, including unresponsive staff and an unaccommodating manager, was a significant concern for some.',
+      'The hygiene standards were questioned, with reports of insects found in food and dirty washrooms.'
+    ],
+    suggestions: [
+      'Reviewing portion sizes and ensuring they are adequate for the price point would address a major customer concern.',
+      'Implementing stricter quality control measures for food preparation and presentation is crucial to avoid future incidents.',
+      'Investing in training for staff to improve customer service and responsiveness is essential to enhance the overall dining experience.',
+      'Maintaining high hygiene standards throughout the restaurant, including regular cleaning and inspections, is paramount for customer confidence.'
+    ]
+  }
+}
+improvement suggested :  {
+  score: '7',
+  Redundencies: [
+    "The summary mentions 'portion size' being an issue multiple times, which could be consolidated into a single point.",
+    "The summary repeatedly mentions 'food quality' issues. These points could be grouped under a more general category like 'food quality and hygiene' to avoid redundancy."
+  ],
+  Important_points_missing: [
+    'The summary misses the specific complaints about the taste of food (e.g., bland, inconsistent, poor taste).',
+    'The summary does not mention the specific incident of hair in food, a critical hygiene concern.',
+    "The summary omits the customer's complaint about the late delivery, a key aspect of delivery experience."
+  ]
+}
+After improvement summary :  {
+  analysis: {
+    positivePoints: [
+      "Customers have praised the restaurant's authentic Rajasthani cuisine, highlighting its delicious flavors and variety.  They specifically recommend trying the moong halwa and kachori.",
+      'The friendly staff was appreciated by many, adding a positive touch to the dining experience.',
+      'The delivery service was generally appreciated for its promptness.  Some customers also praised the good packaging.'
+    ],
+    negativePoints: [
+      'Several customers expressed dissatisfaction with the portion sizes, finding them too small for the price.  Many complaints specifically mentioned the small size of the baati, daal and vegetables.',
+      'Multiple customers reported finding foreign objects in their food, including hair and insects.  One customer even described finding a dead insect in their daal.',
+      'The taste of the food was frequently criticized as bland, inconsistent or below average.  Customers also complained about the quality of the food, noting that it was cold, spilled and lacked flavor.  There were also complaints about the  inauthentic flavors.',
+      'Poor customer service was a significant concern, with reports of unresponsive staff, an unaccommodating manager, and a general lack of hospitality.',
+      'Hygiene standards were questioned, with reports of insects found in food, dirty washrooms, and a lack of concern from staff about these issues.'
+    ],
+    suggestions: [
+      'Reviewing portion sizes and ensuring they are adequate for the price point would address a major customer concern.  Focus on providing appropriate portions of key dishes like baati, daal and vegetables.',
+      'Implementing stricter quality control measures for food preparation and presentation is crucial to avoid future incidents of foreign objects and inconsistent quality. ',
+      'Investing in training for staff to improve customer service and responsiveness is essential to enhance the overall dining experience.  This should include training on hygiene and handling customer complaints effectively.',
+      'Maintaining high hygiene standards throughout the restaurant, including regular cleaning and inspections, is paramount for customer confidence.  Regularly inspect food, kitchen and dining areas to prevent future hygiene issues.',
+      'Addressing the specific complaints about the taste of the food, including its blandness and inconsistency, is crucial for improving customer satisfaction.  Focus on ensuring authentic Rajasthani flavors and consistency in taste.'
+    ]
+  }
+}
+**************************************************** merging them into one summary ********************************
+main merge_1 :  {
+  analysis: {
+    positivePoints: [
+      "The restaurant's authentic Rajasthani cuisine is consistently praised for its delicious flavors, variety, and similarity to traditional dishes.",
+      "Many customers appreciate the friendly and attentive service, often highlighting the staff's kindness and helpfulness.",
+      'The restaurant is considered good value for money, particularly for the Rajasthani thalis, offering a variety of dishes at an affordable price.',
+      "The packaging of orders and the presentation of food are often mentioned as positive aspects, with customers praising its impressive 'grandeur'.",
+      'Several customers enjoy the birthday celebration experience, particularly the birthday song performed by the staff, which adds a special touch to the occasion.'
+    ],
+    negativePoints: [
+      "Customers frequently complain about the quality of the food, citing concerns about stale, chilled, or below-average food, including specific issues with the 'Gatta Sabji', 'Kadhi', and rice.",
+      'Several customers have expressed dissatisfaction with the portion sizes, finding them too small, especially for the price, with many complaining about the small size of the baati, daal, and vegetables.',
+      'Multiple reviews highlight concerns about food hygiene, with reports of cold food, rotten rice, foreign objects like hair and insects in food, and unhygienic conditions.',
+      'The restaurant has been criticized for its overcrowding, leading to long wait times and poor service, and for its lack of proper air conditioning, creating an uncomfortable atmosphere.',
+      'Customers have voiced dissatisfaction with the no-cash payment policy, finding it inconvenient and limiting, especially for those without access to card payments.'
+    ],
+    suggestions: [
+      'Implementing stricter quality control measures for food preparation and presentation is crucial to address concerns about food quality, freshness, and hygiene. This includes ensuring consistent food quality across all dishes and preventing foreign objects in food.',
+      "Reviewing and potentially revising the portion sizes to align with customer expectations, especially considering the restaurant's price point, is essential to address concerns about inadequate portions, particularly for key dishes like baati, daal, and vegetables.",
+      'Addressing the overcrowding issue by implementing strategies to manage customer flow and improve service quality during peak hours, as well as investing in proper air conditioning to create a more comfortable dining experience, would significantly enhance the overall customer experience.',
+      'Investing in training for staff to improve customer service, responsiveness, and hygiene protocols is crucial. This includes training on handling customer complaints effectively, addressing concerns promptly, and maintaining high standards of cleanliness throughout the restaurant.',
+      'Considering the adoption of cashless payment methods or providing clear communication regarding available payment options would address the inconvenience faced by customers who do not carry cash.'
+    ]
+  }
+}
+need for improvement :  {
+  score: 7,
+  missedPoints: [
+    "The merged summary missed several important points related to the restaurant's menu, particularly the lack of variety and the specific suggestion to expand the menu to include more traditional Rajasthani options. ",
+    "The merged summary also missed the point about the restaurant's refusal to host birthday parties, which was a source of disappointment for some customers.  The suggestion to review this policy and consider accommodating options for customers who want to celebrate at the restaurant was also omitted. ",
+    "The merged summary did not mention the customer complaints about the restaurant's no-cash payment policy.  This was a significant issue for some customers who did not have access to card payments. ",
+    "The merged summary failed to mention a complaint about the restaurant's refusal to host birthday parties, a point present in the individual summaries. ",
+    "The merged summary missed the complaint about the 'lack of sufficient gravy', particularly with rice, which was a recurring concern in the individual summaries.  The suggestion to review the quantities of gravy provided was also absent. ",
+    'The merged summary did not mention the specific recommendation to try moong halwa and kachori, which were highlighted as popular dishes in one of the individual summaries. '
+  ]
+}
+improved merge :  {
+  analysis: {
+    positivePoints: [
+      "The restaurant's authentic Rajasthani cuisine is consistently praised for its delicious flavors, variety, and similarity to traditional dishes.  Customers specifically recommend trying the moong halwa and kachori.",
+      "Many customers appreciate the friendly and attentive service, often highlighting the staff's kindness and helpfulness.",
+      'The restaurant is considered good value for money, particularly for the Rajasthani thalis, offering a variety of dishes at an affordable price.',
+      "The packaging of orders and the presentation of food are often mentioned as positive aspects, with customers praising its impressive 'grandeur'.",
+      'The delivery service is generally appreciated for its promptness. Some customers also praised the good packaging.'
+    ],
+    negativePoints: [
+      "Customers frequently complain about the quality of the food, citing concerns about stale, chilled, or below-average food, including specific issues with the 'Gatta Sabji', 'Kadhi', and rice.  Multiple customers reported finding foreign objects in their food, including hair and insects. One customer even described finding a dead insect in their daal.",
+      'Several customers have expressed dissatisfaction with the portion sizes, finding them too small, especially for the price, with many complaining about the small size of the baati, daal, and vegetables.',
+      'Multiple reviews highlight concerns about food hygiene, with reports of cold food, rotten rice, foreign objects like hair and insects in food, and unhygienic conditions.  There are reports of unhygienic washrooms, lack of water, and even closed washrooms.',
+      'The restaurant has been criticized for its overcrowding, leading to long wait times and poor service, and for its lack of proper air conditioning, creating an uncomfortable atmosphere.',
+      'Customers have voiced dissatisfaction with the no-cash payment policy, finding it inconvenient and limiting, especially for those without access to card payments. The restaurant has also been criticized for refusing to host birthday parties, disappointing customers who had planned celebrations there.'
+    ],
+    suggestions: [
+      "Implementing stricter quality control measures for food preparation and presentation is crucial to address concerns about food quality, freshness, and hygiene.  This includes ensuring consistent food quality across all dishes, preventing foreign objects in food, and addressing specific concerns about the taste and quality of certain dishes like 'Gatta Sabji', 'Kadhi', and rice.",
+      "Reviewing and potentially revising the portion sizes to align with customer expectations, especially considering the restaurant's price point, is essential to address concerns about inadequate portions, particularly for key dishes like baati, daal, and vegetables.",
+      'Addressing the overcrowding issue by implementing strategies to manage customer flow and improve service quality during peak hours, as well as investing in proper air conditioning to create a more comfortable dining experience, would significantly enhance the overall customer experience.',
+      'Investing in training for staff to improve customer service, responsiveness, and hygiene protocols is crucial. This includes training on handling customer complaints effectively, addressing concerns promptly, and maintaining high standards of cleanliness throughout the restaurant.',
+      'Expanding the menu to offer a wider variety of dishes and including more traditional Rajasthani options would cater to diverse preferences and address the lack of options.  Considering the adoption of cashless payment methods or providing clear communication regarding available payment options would address the inconvenience faced by customers who do not carry cash. Review the policy on birthday celebrations and potentially offer accommodating options for customers wanting to celebrate at the restaurant. Review the quantities of gravy provided, especially with rice, to guarantee sufficient sauce for accompanying dishes.'
+    ]
+  }
+}
+further need for improvement :  {
+  score: 8,
+  missedPoints: [
+    "The merged summary missed the suggestion to improve staff training to ensure they are able to meet customer requests and address concerns in a timely manner. This is important as multiple reviews mentioned issues with staff responsiveness and the manager's lack of receptiveness to feedback.",
+    'The merged summary missed the suggestion to increase portion sizes to better align with customer expectations and pricing.  This is particularly relevant as several customers complained about the small portion sizes, especially for the price.'
+  ]
+}
+improved merge :  {
+  analysis: {
+    positivePoints: [
+      "The restaurant's authentic Rajasthani cuisine is consistently praised for its delicious flavors, variety, and similarity to traditional dishes.  Customers specifically recommend trying the moong halwa and kachori.",
+      "Many customers appreciate the friendly and attentive service, often highlighting the staff's kindness and helpfulness.",
+      'The restaurant is considered good value for money, particularly for the Rajasthani thalis, offering a variety of dishes at an affordable price.',
+      "The packaging of orders and the presentation of food are often mentioned as positive aspects, with customers praising its impressive 'grandeur'.",
+      'The delivery service is generally appreciated for its promptness. Some customers also praised the good packaging.'
+    ],
+    negativePoints: [
+      "Customers frequently complain about the quality of the food, citing concerns about stale, chilled, or below-average food, including specific issues with the 'Gatta Sabji', 'Kadhi', and rice.  Multiple customers reported finding foreign objects in their food, including hair and insects. One customer even described finding a dead insect in their daal.",
+      'Several customers have expressed dissatisfaction with the portion sizes, finding them too small, especially for the price, with many complaining about the small size of the baati, daal, and vegetables.',
+      'Multiple reviews highlight concerns about food hygiene, with reports of cold food, rotten rice, foreign objects like hair and insects in food, and unhygienic conditions.  There are reports of unhygienic washrooms, lack of water, and even closed washrooms.',
+      'The restaurant has been criticized for its overcrowding, leading to long wait times and poor service, and for its lack of proper air conditioning, creating an uncomfortable atmosphere.',
+      'Customers have voiced dissatisfaction with the no-cash payment policy, finding it inconvenient and limiting, especially for those without access to card payments. The restaurant has also been criticized for refusing to host birthday parties, disappointing customers who had planned celebrations there.'
+    ],
+    suggestions: [
+      "Implementing stricter quality control measures for food preparation and presentation is crucial to address concerns about food quality, freshness, and hygiene.  This includes ensuring consistent food quality across all dishes, preventing foreign objects in food, and addressing specific concerns about the taste and quality of certain dishes like 'Gatta Sabji', 'Kadhi', and rice.",
+      "Reviewing and potentially revising the portion sizes to align with customer expectations, especially considering the restaurant's price point, is essential to address concerns about inadequate portions, particularly for key dishes like baati, daal, and vegetables.",
+      'Addressing the overcrowding issue by implementing strategies to manage customer flow and improve service quality during peak hours, as well as investing in proper air conditioning to create a more comfortable dining experience, would significantly enhance the overall customer experience.',
+      'Investing in training for staff to improve customer service, responsiveness, and hygiene protocols is crucial. This includes training on handling customer complaints effectively, addressing concerns promptly, and maintaining high standards of cleanliness throughout the restaurant.',
+      'Expanding the menu to offer a wider variety of dishes and including more traditional Rajasthani options would cater to diverse preferences and address the lack of options.  Considering the adoption of cashless payment methods or providing clear communication regarding available payment options would address the inconvenience faced by customers who do not carry cash. Review the policy on birthday celebrations and potentially offer accommodating options for customers wanting to celebrate at the restaurant. Review the quantities of gravy provided, especially with rice, to guarantee sufficient sauce for accompanying dishes.'
+    ]
+  }
+}
