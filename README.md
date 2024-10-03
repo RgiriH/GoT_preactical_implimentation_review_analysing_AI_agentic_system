@@ -18,5 +18,5 @@ This project is an AI-powered application designed to analyze restaurant reviews
 - **Gemini-1.5-flake** as the foundational AI model.
 
 ## example out puts
-- example outputs are available in the demo file
+- example outputs are available in the demo file inside desktop
 - the include all the iintermediate thoughts of the AI before giving final output
