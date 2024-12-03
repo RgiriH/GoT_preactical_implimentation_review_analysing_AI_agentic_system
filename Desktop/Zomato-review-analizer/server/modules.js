@@ -1,9 +1,8 @@
 const getModelresponce = async (model, prompt) => {
-     
+
      const result = await model.generateContent(prompt);
      const response = await result.response;
      let data = response.text();
-
 
      
    data = data.replace("```json", '').trim();
