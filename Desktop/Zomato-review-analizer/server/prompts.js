@@ -2,7 +2,8 @@ const scorePrompt = (reviews, summary) => {
   return `
       Please evaluate the provided summary based on its effectiveness in retrieving relevant information from the restaurant reviews provided in Reviews input and minimizing redundant content. Your score should be based on the following criteria:
       Make sure to provide a parsable json as stated below , just out put the pure json without any additional quotes in begining or ending which invalidates the JSON.
-      Dont add prefix like """json{}""" in the begining which makes it invalid json to parse.
+      Dont add prefix like """json{}""" or \`\`\` json{ }\`\`\ in the begining which makes it invalid json to parse focus on this point as its a crutial step.
+      Make sure to return a parsable JSON object.
 
       Criteria for Scoring:
         1. Information Retrieval (5 points):
@@ -46,7 +47,7 @@ const scorePrompt = (reviews, summary) => {
         {
           "score": 8,
           "Redundencies" : [" put your points in arry form here about the information which is redundent multible times in the summary genrated provided in Summary input which can be summarized in single point."],
-          "Important points missing " : [" put your points in arry form here about the some importent topics which are missing in the summary genrated provided in Summary input while analysing the provided Review input "]
+          "Important_points_missing " : [" put your points in arry form here about the some importent topics which are missing in the summary genrated provided in Summary input while analysing the provided Review input "]
         }
         NOTE:
          - make sure to provide a parsable json as stated above , just out put the json without any additional quotes in begining or ending which invalidates the JSON dont add a "," symbol in the last point of the arry.
@@ -59,7 +60,8 @@ const mainPrompt = (reviews) => {
 return `
     Please provide a comprehensive analysis of the restaurant reviews for the owner. Your response should be structured in JSON format as outlined below.
     Make sure to provide a parsable json as stated below , just out put the pure json without any additional quotes in begining or ending which invalidates the JSON.
-    Dont add prefix like """json{}""" in the begining which makes it invalid json to parse.
+    Dont add prefix like """json{}""" or \`\`\` json{ }\`\`\ in the begining which makes it invalid json to parse.
+    Make sure to return a parsable JSON object.
 
 Instructions
 1. Review Input: Use the provided array of reviews to craft your analysis.  
@@ -112,7 +114,7 @@ const mergePrompt = (allSummaries) => {
   
     Please merge the provided 4 summaries into one comprehensive analysis,  The merged review should be structured in the same format as the input, with categories for "positivePoints", "negativePoints", and "suggestions."
     Make sure to provide a parsable json as stated below , just out put the pure json without any additional quotes in begining or ending which invalidates the JSON.
-    Dont add prefix like """json{ your responce here }""" in the begining which makes it invalid json to parse.
+    Dont add prefix like """json{ your responce here }""" or \`\`\` json{ your responce here }\`\`\ in the begining which makes it invalid json to parse.
 
     Instructions:
     1. Consider Ever Point :
@@ -123,7 +125,9 @@ const mergePrompt = (allSummaries) => {
     2. Minimize Redundancy:
      - Merge similar points across the reviews into single, well-phrased statements.
      - Ensure that the summary avoids duplication of feedback.
-
+     -  Make sure to return a parsable JSON object
+     - If a point is already covered dont repeat it.
+     
     3. Structure:
      - Positive points should be grouped in the "positivePoints" section.
      - Negative feedback should be grouped in the "negativePoints" section.
@@ -152,7 +156,9 @@ const mergePrompt = (allSummaries) => {
    Input :
    ${allSummaries.map(
      (summary, index) =>
-       `###################################### Input summary ${ index + 1} starts ########################################### \n
+       `###################################### Input summary ${
+         index + 1
+       } starts ########################################### \n
            - positive points extracted : \n
            ${summary.analysis.positivePoints.map(
              (review, index) => (index + 1).toString() + " " + review + "\n"
@@ -165,7 +171,9 @@ const mergePrompt = (allSummaries) => {
            ${summary.analysis.suggestions.map(
              (review, index) => (index + 1).toString() + " " + review + "\n"
            )}
-        ###################################### Input summary ${index + 1} ends ########################################### \n
+        ###################################### Input summary ${
+          index + 1
+        } ends ########################################### \n
          `
    )}
    
@@ -218,7 +226,7 @@ Output Format:
 
  Input: \n
  -  suggestions for some Important points missing in the innitial summary which can be incorporated : \n
-   ${feedBack.Important_points_missing.map(
+   ${feedBack.Important_points_missing?.map(
      (review, index) => (index + 1).toString() + " " + review + "\n"
    )}
  - Reviews: \n ${reviews.map(
@@ -335,6 +343,7 @@ const improveTheMergePrompt = (allSummaries, mergedSummary, suggestions) => {
       You are given a merged summary and suggestions for improving it. Your goal is to revise the merged summary by incorporating the feedback provided in the suggestions. Ensure that the revised summary accurately captures all key points from the individual summaries, avoids redundancy, and maintains clarity.
       Make sure to provide a parsable json as stated below , just out put the pure json without any additional quotes in begining or ending which invalidates the JSON.
       Dont add prefix like """json{}""" in the begining which makes it invalid json to parse.
+       Make sure to return a parsable JSON object
 
 Instructions:
 1. Focus on Suggestions made :
@@ -398,15 +407,15 @@ Output Format:
              (review, index) => (index + 1).toString() + " " + review + "\n"
            )}
       - negative points extracted : \n
-           ${mergedSummary.analysis.negativePoints.map(
+           ${mergedSummary.analysis?.negativePoints.map(
              (review, index) => (index + 1).toString() + " " + review + "\n"
            )}
       - suggestion's made : \n
-           ${mergedSummary.analysis.suggestions.map(
+           ${mergedSummary.analysis?.suggestions.map(
              (review, index) => (index + 1).toString() + " " + review + "\n"
            )}
  -  Suggestions for some Important points missing in the provided  Merged summary: \n
-    ${suggestions.missedPoints.map(
+    ${suggestions.missedPoints?.map(
       (review, index) => (index + 1).toString() + " " + review + "\n"
     )}         
 

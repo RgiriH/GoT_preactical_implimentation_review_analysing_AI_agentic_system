@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import style from './Data.module.css'
 import { useRouter } from 'next/navigation';
 import Image from 'next/image';
@@ -12,6 +12,7 @@ const Data = () => {
 
   const { data,fullData} = GetContext()
   const route = useRouter()
+  const [disabled, setDisabled] = useState(fullData == null ? true : false);
 
 useEffect(() => {
   if (data == null) {
@@ -40,48 +41,31 @@ const handleSave = async() => {
     
     json = await JSON.stringify(json)
     localStorage.setItem("SavedSummaries", json);
-
+    
   } else {
     let json = [fullData]
 
     json = await JSON.stringify(json);
     localStorage.setItem("SavedSummaries", json);
   }
+
+  setDisabled(true)
+  alert("saved successfully")
 }
 
     
   return (
     <>
-      <div className={style.coverM}>
-        <div
-          className={style.save}
-          style={{
-            display: "flex",
-            gap: "20px",
-            justifyContent: "flex-end",
-            fontSize: "20px",
-            alignItems: "center",
-            cursor: "pointer",
-            width: "80px",
-            height: "80px",
-            borderRadius: "50%",
-            position: "fixed",
-            zIndex: "2",
-            right: "20px",
-            top: "80px",
-          }}
-          onClick={() => handleSave()}
-        >
-          <div style={{ color: "gray" }}>save to local storage</div>
-          <img src={pin.src} style={{ width: "50px", height: "50px" }}></img>
-        </div>
+    <div className={style.coverM}>
+    
         <div className={style.feedcover}>
           <div className={style.card}>
             <div className={style.header}>Positive Points</div>
             <Image
               src={positively}
               fill
-              alt="BG IMAGE"
+              alt="BG IMAGE 1"
+              fetchPriority="high"
               className={style.img}
             ></Image>
             <div className={style.gradient}></div>
@@ -101,7 +85,8 @@ const handleSave = async() => {
             <Image
               src={negative}
               fill
-              alt="BG IMAGE"
+              alt="BG IMAGE 2"
+              fetchPriority="high"
               className={style.img}
             ></Image>
             <div className={style.gradient}></div>
@@ -121,7 +106,8 @@ const handleSave = async() => {
             <Image
               src={suggestion}
               fill
-              alt="BG IMAGE"
+              alt="BG IMAGE 3"
+              fetchPriority="high"
               className={style.img}
             ></Image>
             <div className={style.gradient}></div>
@@ -136,6 +122,31 @@ const handleSave = async() => {
             </div>
           </div>
         </div>
+        <div style={{width:"100%",display:'flex',justifyContent:"center",padding:"0px"}}>   
+           <button
+              style={{
+                backgroundColor: '#4CAF50',
+                color: 'white',
+                padding: '10px 20px',
+                fontSize: '16px',
+                border: 'none',
+                borderRadius: '5px',
+                cursor: disabled ? "not-allowed" : "pointer",
+                transition: 'background-color 0.3s',
+                
+              }}
+              onMouseEnter={(e) => {
+                 e.target.style.boxShadow = '0px 0px 15px #4CAF50';
+              }}
+              onMouseOut={(e) => {
+                e.target.style.boxShadow = '';
+              }}   
+              disabled={disabled }
+              onClick={() => handleSave()}
+          >
+            Save Summary
+          </button>
+        </div> 
         <div
           style={{
             padding: "10px 50px",

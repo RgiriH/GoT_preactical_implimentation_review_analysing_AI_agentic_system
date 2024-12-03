@@ -10,6 +10,8 @@ const gemini = require('./gemini');
 
 //sc-1hez2tp-0 
 
+
+
 const loadHTML = async (html, reviews ) => {
   let $ = await cheerio.load(html);
 
@@ -42,7 +44,7 @@ const loadHTML = async (html, reviews ) => {
     i = i + 1;
   });
   
-    console.log("completed with reviews : ", reviews);
+   // console.log("completed with reviews : ", reviews);
 
    //code to check if all reviews are over 
     
@@ -50,7 +52,7 @@ const loadHTML = async (html, reviews ) => {
     let ind = 0;
     let found = false
     movers.map(() => {
-        console.log($(movers[ind]).find('svg').find('title').text())
+        //console.log($(movers[ind]).find('svg').find('title').text())
         if ($(movers[ind]).find("svg").find("title").text() == "chevron-right") found = true
         ind = ind + 1;
     })
@@ -75,7 +77,7 @@ const scrape = async (req, res) => {
         console.log(error);
         res.status(500);
         res.send({
-          error: "cannot get data",
+          message: "cannot get data",
         });
       } else {
         console.log("UPDAING THE HTML");
@@ -84,12 +86,14 @@ const scrape = async (req, res) => {
         if (isDone === "invalid") {
              res.status(404);
              res.send({
-               error: "invalid url, enter a valid review page url of a restaurent",
+               message: "invalid url, enter a valid review page url of a restaurent",
              }); 
         }
         else if (reviews.length > size || isDone === "done") {
             
-            // gathering summaries for the reviews
+          // gathering summaries for the reviews
+          
+
             console.log("**************************GETTING SUMMARIES************************")
             try {
                 const summary = await gemini.run(reviews)
@@ -98,13 +102,14 @@ const scrape = async (req, res) => {
             } catch (error) {
               res.status(500);
               res.send({
-                error: "cannot get summaries",
+                message: "internal server error !"
               });  
             }
             
         }
         else {
             console.log(url + page)
+            
             request(url + page, cb);
         }
         
@@ -112,11 +117,11 @@ const scrape = async (req, res) => {
     };
   
   if (!size || !url) {
-    console.log("******************DATA MISSING********************")
-    console.log(req.body)
+    //console.log("******************DATA MISSING********************")
+    //console.log(req.body)
     res.status(500);
     res.send({
-      error: "All required fields are not send",
+      message: "All required fields are not send",
     });
   }
    
@@ -130,7 +135,7 @@ const scrape = async (req, res) => {
 }
 
 module.exports = {
-    scrape
+  scrape,
 }
 
 

@@ -5,6 +5,10 @@ import { Circles } from 'react-loading-icons';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 
+const API_URL = process.env.NEXT_PUBLIC_API_URL
+
+
+
 import style from "./Body.module.css"
 import Vector from "../../../public/Vector.png"
 import Right from "../../../public/Right.png";
@@ -14,11 +18,12 @@ const Body = () => {
 
   const { data, setData ,fullData,setFullData} = GetContext();
   const rounter = useRouter()
-
+  
   const [url, setUrl] = useState("")
   const [loading, setLoading] = useState(false)
   const [error, setError] = useState(null)
-  const [lenght,setLenght] = useState(50)
+  const [lenght, setLenght] = useState(50)
+  
   
   const getSummary = async () => {
     
@@ -32,20 +37,30 @@ const Body = () => {
           size: lenght,
         };
 
-       const res = await  axios("http://localhost:8000/api/summary", {
+      const pattern = /^https:\/\/www\.zomato\.com\/[a-zA-Z0-9\-]+\/[a-zA-Z0-9\-]+(?:\/[a-zA-Z0-9\-]+)*\/reviews$/;
+
+        if (!pattern.test(url)) {
+          setError("Please provide a valid URL of a zomato restaurant's review page")
+          setLoading(false)
+          return
+        }
+       const res = await  axios(`${API_URL}/api/summary`, {
           method: "post",
           data: body,
           timeout: 300000,
-        })
+       })
+        
+
         setData(res.data.analysis)
         setFullData({ data: res.data.analysis ,span : lenght,url:url,date : Date.now()});
         
         rounter.push('/data')
 
       } catch (error) {
-        console.log(error)
-        setError(error?.response?.data?.error)
-        console.log(error?.response?.data?.error);
+        console.log(error?.response?.data)
+        if(error?.response?.data?.message) setError(error?.response?.data?.message)
+        else setError(error.message)
+       
       }
       
 
@@ -67,7 +82,7 @@ const Body = () => {
               placeholder="enter a valid zomato url to get summaries"
             />
             <div className={style.selectBar} onClick={() => setUrl("")}>
-              <Image src={Vector.src} width={15} height={15} />
+              <Image src={Vector.src} width={15} height={15} alt='vector' fetchPriority="high"/>
             </div>
           </div>
           <div className={style.time_line}>
@@ -122,7 +137,7 @@ const Body = () => {
           </p>
           <button className={style.button} onClick={() => getSummary()}>
             <div>Genrate Summary</div>
-            <Image src={Right.src} width={25} height={25} alt="logo" />
+            <Image src={Right.src} width={25} height={25} alt="logo" fetchPriority="high"/>
           </button>
           <div style={{ color: "red" }}>
             {error !== null ? (
@@ -133,6 +148,7 @@ const Body = () => {
               ""
             )}
           </div>
+          
         </div>
         <div>
           <img src={img2.src} className={style.bg}></img>
@@ -151,13 +167,27 @@ const Body = () => {
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
+            gap:"20px",
             top: "0px",
             left: "0px",
-            opacity: ".2",
+            opacity: ".8",
             flexDirection: "column",
+            zIndex:10
           }}
         >
           <Circles />
+          <span
+            style={{
+              textAlign: "center",
+              background: `linear-gradient(to bottom, #E6F7FF, #FFFFFF)`,
+              color: "grey",
+              padding: "10px",
+              borderRadius:"10px"
+            }}
+          >Please wait! <br />
+            It may take some seconds to few minutes as we need to extract reviews,<br />
+            and have to perform series of analyses to get best summary...
+          </span>
           <div
             style={{ marginTop: "20px", fontSize: "30px", color: "#B22222" }}
           ></div>

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import { Head } from "next/document";
 import Header from "@/main-pages/Header/Header";
 import Data from "@/main-pages/Data/Data";
 import Footer from "@/main-pages/Footer/Footer";
@@ -15,6 +16,7 @@ export default function Home() {
         height: "100svh",
       }}
     >
+      
       <Header />
       <Data />
       <Footer />

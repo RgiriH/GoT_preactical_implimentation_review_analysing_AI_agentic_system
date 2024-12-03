@@ -8,9 +8,10 @@ import { GetContext } from '@/Store';
 
 
 
+
 const Summaries = () => {
 
-const {data,setData} = GetContext()
+const {data,setData,setFullData} = GetContext()
   const [Data, setDataStorage] = useState([])
   const router = useRouter();
   
@@ -20,12 +21,25 @@ const {data,setData} = GetContext()
        if (summaries) {
          const json = await JSON.parse(summaries);
          setDataStorage(json);
-         console.log(json);
+        
        }
   }
 
+  const getDateFormated = (currentTimestamp) => {
+    
+
+      const date = new Date(currentTimestamp);
+      // Convert to Indian Standard Time (IST)
+      const options = { timeZone: 'Asia/Kolkata', hour12: true };
+      const istDate = date.toLocaleString('en-IN', options);
+    
+    return istDate
+  }
+
+
   const handleOpen = (summary) => {
     setData(summary.data)
+    setFullData(null)
     router.push('/data')
   }
 
@@ -81,7 +95,7 @@ const {data,setData} = GetContext()
                           #last {Summaries.span} reviews
                         </span>
                         <span className={style.date}>
-                          On : {Summaries.date}
+                          On : {getDateFormated(Summaries.date)}
                         </span>
                       </div>
                       <a
@@ -154,7 +168,7 @@ const {data,setData} = GetContext()
               gap: "20px",
             }}
           >
-            <Image src={cloud} width={150} height={150} alt="img loading" />
+            <Image src={cloud} width={150} height={150} alt="img loading" fetchPriority="high"/>
             <button className={style.button} onClick={() => router.push("/")}>
               back
             </button>

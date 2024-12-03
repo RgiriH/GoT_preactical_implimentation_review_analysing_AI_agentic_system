@@ -44,19 +44,19 @@ const Footer = () => {
         <div className={style.share}>
           <div className={style.text}>Recomend our product </div>
           <div className={style.shareButton} onClick={() => setShare(true)}>
-            <Image src={share} width={20} height={20}></Image>
+            <Image src={share} width={20} height={20} alt = "share" fetchPriority="high"></Image>
           </div>
         </div>
-        <div className={style.developer}>Contact Developer</div>
+        <a href={"https://www.linkedin.com/in/girish-hr-448a3b1b5"} target="blank" className={style.developer}>Contact Developer</a>
       </div>
       {shareit && (
         <div className={style.share_tab}>
           <div style={{ fontSize: "30px" }}>Share on </div>
           <div className={style.media}>
-            <Image src={twitter} width={40} height={40} />
-            <Image src={whatsapp} width={40} height={40} />
-            <Image src={instagram} width={40} height={40} />
-            <Image src={facebook} width={40} height={40} />
+            <Image src={twitter} width={40} height={40} alt='twitter' fetchPriority="high"/>
+            <Image src={whatsapp} width={40} height={40} alt='whatsapp' fetchPriority="high"/>
+            <Image src={instagram} width={40} height={40} alt = 'instagram' fetchPriority="high"/>
+            <Image src={facebook} width={40} height={40} alt = 'facebook' fetchPriority="high"/>
           </div>
           <div
             style={{

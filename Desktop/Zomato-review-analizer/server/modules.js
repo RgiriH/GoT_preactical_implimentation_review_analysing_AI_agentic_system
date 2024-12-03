@@ -2,8 +2,17 @@ const getModelresponce = async (model, prompt) => {
      
      const result = await model.generateContent(prompt);
      const response = await result.response;
-     const data = response.text();
-     return JSON.parse(data)
+     let data = response.text();
+
+
+     
+   data = data.replace("```json", '').trim();
+   data = data.replace("```",'').trim()
+  
+    //console.log(data) 
+    return JSON.parse(data)
+    
+     
 }
 
 const getResultsInSlots = async (model, reviews, promptFunction , scorePromptFunction , improvementPromptFunction) => {
@@ -35,9 +44,9 @@ const getResultsInSlots = async (model, reviews, promptFunction , scorePromptFun
       );
     
       currentIndex = currentIndex + 50;
-      console.log("Original summary : ", jsonSummary);
-      console.log("improvement suggested : ", scoreResponce);
-      console.log("After improvement summary : ", improvedJsonSummary);
+      // console.log("Original summary : ", jsonSummary);
+      // console.log("improvement suggested : ", scoreResponce);
+      // console.log("After improvement summary : ", improvedJsonSummary);
 
       allSummaries.push(improvedJsonSummary);
     }
@@ -50,16 +59,16 @@ const getResultsInSlots = async (model, reviews, promptFunction , scorePromptFun
 const improveTheMerge = async (model, allSummaries, mergePromptFunction , scoreTheMergePromptFunction, improveTheMergePromptFunction) => {
      
       const mergedSummary = await getModelresponce(model, mergePromptFunction(allSummaries));
-      console.log("main merge : " , mergedSummary)
+     // console.log("main merge : " , mergedSummary)
       const improvementNeeded_1 = await getModelresponce(model,scoreTheMergePromptFunction(allSummaries,mergedSummary))
-      console.log("need for improvement : ", improvementNeeded_1);
+     // console.log("need for improvement : ", improvementNeeded_1);
       const improvedMerge_1 = await getModelresponce(model,improveTheMergePromptFunction(allSummaries, mergedSummary , improvementNeeded_1));
-      console.log("improved merge : ", improvedMerge_1);
+      //console.log("improved merge : ", improvedMerge_1);
       const improvementNeeded_2 = await getModelresponce(
         model,
         scoreTheMergePromptFunction(allSummaries, improvedMerge_1)
       );
-      console.log("need for improvement : ", improvementNeeded_2);
+     // console.log("need for improvement : ", improvementNeeded_2);
       const improvedMerge_2 = await getModelresponce(
         model,
         improveTheMergePromptFunction(
@@ -68,7 +77,7 @@ const improveTheMerge = async (model, allSummaries, mergePromptFunction , scoreT
           improvementNeeded_2
         )
       );
-      console.log("improved merge : ", improvedMerge_1);
+     // console.log("improved merge : ", improvedMerge_1);
       
       return improvedMerge_2;
       
